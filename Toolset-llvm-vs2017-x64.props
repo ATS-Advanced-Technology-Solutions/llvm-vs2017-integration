@@ -35,10 +35,11 @@
     <LLVMInstallDir>$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\LLVM\LLVM)</LLVMInstallDir>
     <LLVMInstallDir Condition="'$(LLVMInstallDir)' == ''">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\LLVM\LLVM)</LLVMInstallDir>
     <ExecutablePath>$(LLVMInstallDir)\bin;$(ExecutablePath)</ExecutablePath>
-	<IncludePath>$(LLVMInstallDir)\lib\clang\7.0.0\include;$(IncludePath)</IncludePath>	<LibraryPath>$(LLVMInstallDir)\lib\clang\7.0.0\lib\windows;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(LLVMInstallDir)\lib\clang\7.0.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LLVMInstallDir)\lib\clang\7.0.1\lib\windows;$(LibraryPath)</LibraryPath>
     <VCToolArchitecture>Native64Bit</VCToolArchitecture>
-	<CLToolExe>clang-cl.exe</CLToolExe>
-	<CLToolPath>$(LLVMInstallDir)\bin</CLToolPath>	
+    <CLToolPath>$(LLVMInstallDir)\bin</CLToolPath>
+    <CLToolExe>clang-cl.exe</CLToolExe>
   </PropertyGroup>
 
   <ItemDefinitionGroup>
